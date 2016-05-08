@@ -251,25 +251,23 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                            <div class="form-group">
                               <label class="control-label col-md-3">脚本参数</label>
                               <div class="col-md-4">
-                                 <input type="text" class="form-control" maxlength="25" name="defaultconfig" id="maxlength_thresholdconfig">
+                        			<a href="#form_modal1" data-toggle="modal" id="pencil"><i class="icon-pencil"></i> [product]</a>&nbsp;&nbsp;
+                        			<a href="#form_modal1" data-toggle="modal" id="pencil"><i class="icon-pencil"></i> [versionLib]</a>
                               </div>
-                           </div>
-                           <div class="form-group">
-                              <label class="control-label col-md-3">默认值</label>
-                              <div class="col-md-4">
-                                 <input type="text" class="form-control" maxlength="25" name="defaultconfig" id="maxlength_thresholdconfig">
+                              <div class="col-md-1 pull-right">
+                              	    <button onclick="#" class="btn btn-sm blue btn-block"><i class="icon-plus-sign m-icon-white"></i>添加参数</button>
                               </div>
                            </div>
                            <div class="form-group">
                               <label class="control-label col-md-3">脚本内容<span class="required">*</span></label>
                               <div class="col-md-9">
-                                 <textarea class="form-control" maxlength="225" rows="5"></textarea>
+                                 <textarea class="form-control" maxlength="225" rows="8"></textarea>
                               </div>
                            </div>
                            <div class="form-group">
                               <label class="control-label col-md-3">脚本描述</label>
                               <div class="col-md-9">
-                                 <input type="text" class="form-control" maxlength="25" name="defaultconfig" id="maxlength_placement">
+                                 <input type="text" class="form-control" maxlength="200" name="defaultconfig" id="maxlength_placement">
                               </div>
                            </div>
                         </div>
@@ -284,6 +282,49 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
                            </div>
                         </div>
                      </form>
+                     
+                <div id="form_modal1" class="modal fade"  role="dialog" aria-hidden="true">
+                        <div class="modal-dialog">
+                           <div class="modal-content">
+                              <div class="modal-header">
+                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                 <h4 class="modal-title">脚本参数[product]</h4>
+                              </div>
+                              <div class="modal-body">
+                                 <form action="#" class="form-horizontal">
+                                    <div class="form-group">
+                                       <label class="control-label col-md-3">参数名称<span class="required">*</span></label>
+                                       <div class="col-md-9">
+                                       	    <input type="text" size="16" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="control-label col-md-3">参数key<span class="required">*</span></label>
+                                       <div class="col-md-9">
+                                            <input type="text" size="16" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="control-label col-md-3">参数默认值</label>
+                                       <div class="col-md-9">
+                                            <input type="text" size="16" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="control-label col-md-3">groovy脚本</label>
+                                       <div class="col-md-9">
+											<textarea class="form-control" placeholder="此处不填则默认为字符串类型参数,由用户通过前台ui输入" maxlength="225" rows="5"></textarea>
+                                       </div>
+                                    </div>
+                                 </form>
+                              </div>
+                              <div class="modal-footer">
+                                 <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+                                 <button class="btn green btn-primary" data-dismiss="modal">保存</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                      <!-- END FORM-->  
                   </div>
                </div>
@@ -348,11 +389,10 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
    <!-- END PAGE LEVEL PLUGINS -->
    <!-- BEGIN PAGE LEVEL SCRIPTS -->
    <script src="assets/scripts/app.js"></script>
-   <script src="assets/scripts/form-components.js"></script>     
+   <script src="assets/scripts/form-components.js"></script>   
    <!-- END PAGE LEVEL SCRIPTS -->
    <script>
       jQuery(document).ready(function() {       
-         // initiate layout and plugins
          App.init();
          FormComponents.init();
       });
